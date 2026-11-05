@@ -1,4 +1,4 @@
--- Criando o banco de dados com ticker, nome da empresa, o setor de atuação, preço e o dividendo anual
+-- Tabela de ações: ticker, empresa, setor, preço e dividendo anual
 CREATE TABLE acoes (
   ticker TEXT,
   empresa TEXT,
@@ -18,3 +18,19 @@ INSERT INTO acoes (ticker, empresa, setor, preco, dividendo_anual) VALUES
 ('BBAS3', 'Banco do Brasil', 'Bancos', 27.60, 3.40),
 ('SUZB3', 'Suzano', 'Papel e Celulose', 52.00, 1.50),
 ('RENT3', 'Localiza', 'Aluguel de Veículos', 44.70, 0.80);
+
+
+-- Criando a carteira de acoes ficticia
+CREATE TABLE carteira (
+  ticker TEXT,
+  quantidade REAL,
+  preco_compra REAL
+);
+
+INSERT INTO carteira (ticker, quantidade, preco_compra) VALUES
+('BBSE3', 40, 32),
+('ITUB4', 200, 30.5),
+('MGLU3', 500, 11.2),
+('PETR4', 100, 35),
+('VALE3', 50, 58),
+('WEGE3', 30, 38);
